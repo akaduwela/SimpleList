@@ -1,4 +1,6 @@
 $(document).ready( function() { 
+
+	// clicking '+' button
 	$('#button').on('click', function(){
 		console.log("adding task")
 		var newItem = '<li class= "list-group-item" data-toggle="modal" data-target="#editModal" data-checked="false">' + '<input type="checkbox" class="chck">' + $('input[name=ListItem]').val() + '<span class="glyphicon glyphicon-remove"></span>' + '</li>';
@@ -6,6 +8,7 @@ $(document).ready( function() {
 		$('input[name=ListItem]').val("")
 	});
 
+	// clicking 'Clear all tasks' button
 	$('#button1').on('click', function(){
 		console.log("removing all tasks")
 		$('ol').empty();
@@ -18,31 +21,16 @@ $(document).ready( function() {
 	$('li').eq(index).remove();
 	});
 
-	// clicking checkbox to cross out item, but not remove it
+	// clicking checkbox to cross out item, but not remove it, or vice versa
     $("ol").on("click", "input", function () {
     
     if (this.checked) {
     	
         $(this).parent().addClass('completed');
         $(this).parents("ol").append($(this).parent());
-        // $(this).parent().remove()
     } else {
         $(this).parent().removeClass('completed');
         $(this).parents("ol").prepend($(this).parent());
     }
     });
-
-    // edit panel
-	$('ol').on('click', 'li', function(){
-		// index = $('li').index(this);
-		// var content = items[index];
-		// console.log(content);
-		$('#edit-input').val("");
-	});
-
-	$('#edit-button').click(function(){
-		var temp= $('#edit-input').val();
-		// loadList(items);
-		// storeToLocal("memos", items);
-	});
 });
