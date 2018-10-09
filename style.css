@@ -1,0 +1,75 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400);
+
+body {
+font: normal normal 13px/16px "Open Sans", sans-serif;
+background: #ccc;
+}
+
+.container{
+padding: 20px;
+width: 425px;
+margin: 0 auto;
+margin-top: 40px;
+background: white;
+border-radius: 5px;}
+
+form {
+display: inline-block;
+}
+
+input{
+padding: 4px 15px 4px 5px;
+}
+
+#button{
+display: inline-block;
+background-color: #228B22;
+color:#ffffff;
+border-radius: 5px;
+text-align:center;
+margin-top:2px;
+padding: 10px 15px;
+}
+
+#button1{
+display: inline-block;
+background-color: #ff0000;
+color:#ffffff;
+border-radius: 5px;
+text-align:center;
+margin-top:2px;
+margin-left: 20px;
+padding: 10px 15px;
+}
+
+#button:hover{
+cursor: pointer;
+opacity: .8;}
+
+#button1:hover{
+cursor: pointer;
+opacity: .8;}
+
+ol {padding-left: 20px;}
+
+ol li {padding: 5px;color:#000;}
+
+ol li:nth-child(even){background: #dfdfdf;}
+
+/*li:hover{
+  cursor: pointer;
+ }*/
+
+ li:hover {
+	/*background-color: tomato;*/
+	transition: 0.7s;
+	cursor: pointer;
+}
+
+span{
+	float: right;
+}
+
+.completed {
+    text-decoration: line-through;
+}
